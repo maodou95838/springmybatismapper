@@ -28,10 +28,9 @@
     <!-- 创建SqlSessionFactory，同时指定数据源 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="configLocation" value="mybatis-conf.xml"/>
+        <property name="typeAliasesPackage" value="com.jackie.springmybatis.domain"/>
     </bean>
+    
+    <mybatis:scan base-package="com.jackie.springmybatis.dao" factory-ref="sqlSessionFactory"/>
 	
-	<bean id="userDao" class="com.jackie.springmybatis.dao.impl.UserDaoImpl">
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-	</bean>
  </beans>

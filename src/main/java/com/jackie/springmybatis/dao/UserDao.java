@@ -9,7 +9,7 @@ import com.jackie.springmybatis.domain.User;
  *
  */
 public interface UserDao {
-	void insert(User user);
+	void insertUser(User user);
 	
 	User selectByPrimaryKey(Integer id);
 }

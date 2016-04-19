@@ -21,7 +21,7 @@ public class UserDaoTest {
 		user.setName("王宝强");
 		user.setCellphone("111111111");
 		user.setUserLoginId("wbq");
-		userDao.insert(user);
+		userDao.insertUser(user);
 	}
 
 }
